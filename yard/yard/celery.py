@@ -14,7 +14,7 @@ app.conf.timezone = 'Europe/Moscow'
 app.conf.beat_schedule = {
     'start_bots': {
         'task': 'yandex.tasks.start',
-        'schedule': crontab(hour=15, minute=1)
+        'schedule': crontab(hour=6, minute=1)
         # 'schedule': 30
     },
 }
