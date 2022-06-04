@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 
+from yard.celery import app
 
 # # options = webdriver.ChromeOptions()
 # # options.add_argument("accept=*/*")

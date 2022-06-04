@@ -16,7 +16,7 @@ def start():
             start_bot.delay(process.url, process.keywords, process.title, process.start_time, process.end_time)
 
 @app.task
-def start_bot(url, keyword, name, start, end,):
+def start_bot(url, keyword, name, start, end):
     b = keyword.split("\n")
     list_theme = ''
     for i in b:
@@ -41,7 +41,7 @@ def start_bot(url, keyword, name, start, end,):
     print("интервал", interval)
     delay_to_start = start - datetime.datetime.now() 
     print( "задержка", delay_to_start.seconds)
-    sleep(delay_to_start.seconds)
+    # sleep(delay_to_start.seconds)
     for theme in list_theme:
         options = webdriver.ChromeOptions()
         options.add_argument(
@@ -56,9 +56,6 @@ def start_bot(url, keyword, name, start, end,):
 
         driver = webdriver.Chrome(ChromeDriverManager().install(), options=options, seleniumwire_options=proxy_options)
         bot.bot_start(driver, url, theme, name)
-        # driver.get("https://yandex.ru/internet")
-        # sleep(5)
-        driver.quit()
         
         sleep(interval)
 
