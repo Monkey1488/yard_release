@@ -11,7 +11,7 @@ SECRET_KEY = 'django-insecure-pt#8gdp-$n@7e^!l+jx6m5tx^jj(f7a8e$pozxmk1c^x(%@b=7
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["127.0.0.1","195.133.49.54"]
 
 
 # Application definition
@@ -102,8 +102,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR]
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [STATIC_DIR]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -120,7 +120,7 @@ CELERY_RESULT_SERIALIZER  = 'json'
 # CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 
 
-try:
-    from .local_settings import *
-except ImportError:
-    from .prod_settings import *
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     from .prod_settings import *

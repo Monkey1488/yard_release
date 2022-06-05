@@ -46,6 +46,7 @@ def start_bot(url, keyword, name, start, end):
         options = webdriver.ChromeOptions()
         options.add_argument(
             "user-agent= Mozilla/5.0 (Linux; Android 10; SM-N960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.58 Mobile Safari/537.36")
+        options.add_argument('--no-sandbox')
         bot = BotMobile()
         proxy_options = {
             "proxy": {
